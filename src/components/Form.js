@@ -2,15 +2,13 @@ import { useState } from "react";
 
 const Form = ({ addTodo }) => {
   const [todo, setTodo] = useState("");
-
   console.log(todo);
 
   const handleAddTodo = (e) => {
     e.preventDefault();
     addTodo(todo);
-    setTodo('');
+    setTodo("");
   };
-
 
   return (
     <form onSubmit={handleAddTodo}>
@@ -22,8 +20,7 @@ const Form = ({ addTodo }) => {
           setTodo(e.target.value);
         }}
       />
-
-      <button >Ajouter</button>
+      <button>Ajouter</button>
     </form>
   );
 };

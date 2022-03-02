@@ -19,22 +19,20 @@ function App() {
   ]);
 
   const saveLocalStorage = () => {
-
     let todosJSON = JSON.stringify(todos);
-    localStorage.setItem('todos', todosJSON);
+    localStorage.setItem("todos", todosJSON);
   };
 
   const getLocalStorage = () => {
-
-    let todosJSON = localStorage.getItem('todos') ? localStorage.getItem('todos') : null;
+    let todosJSON = localStorage.getItem("todos")
+      ? localStorage.getItem("todos")
+      : null;
     let todos = JSON.parse(todosJSON);
     console.log(todos);
 
     const tmpTodos = todos;
     setTodos(todos);
-  }
-
-
+  };
 
   /**
    * Count the todos done
@@ -52,7 +50,6 @@ function App() {
 
   //saveLocalStorage();
   //getLocalStorage();
-
   //console.log(counter);
 
   const addTodo = (todo) => {
@@ -101,17 +98,12 @@ function App() {
     //saveLocalStorage();
   };
 
-
-  useEffect(()=>{
-    getLocalStorage()
-
-  }, [])
-  useEffect(()=>{
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
+  useEffect(() => {
     saveLocalStorage();
-  })
-
-
- 
+  });
 
   return (
     <Fragment>
