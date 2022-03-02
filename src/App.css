@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lato:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #222;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('react.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header {
+    background-color: #111;    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+header img {
+    width: 3rem;
+}
+
+header div {
+    font-size: 1.4rem;
+}
+
+header i {
+    margin-right: 10px;
+}
+
+h1 {
+    flex-grow: 1; 
+    padding: 0 20px;
+}
+
+main {
+    flex-grow: 1;
+    width: 80%;
+    max-width: 1024px;
+    margin: 10px auto;
+}
+
+form {
+    display: flex;
+}
+
+form * {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+form input {
+    border: #ccc solid 1px;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+form button {
+    background-color: rgb(32, 64, 256);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    /* display: flex;     */
+}
+
+li:nth-child(odd) {
+    background-color: #333;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: #444 solid 1px;
+    font-size: 1.4rem;
+}
+
+li span {
+    flex-grow: 1;
+    padding: 10px 20px;
+}
+
+li button {
+    background-color: rgb(168, 0, 0);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.done {
+    opacity: 0.5;
+}
+
+@media screen and (max-width:768px) {
+    html {
+      font-size: 80%;
+    }
+    main {
+        width: 100%;
+        padding: 10px;
+    }   
+    form button {
+        padding: 10px 20px;
+    } 
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
