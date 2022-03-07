@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Form = ({ addTodo }) => {
   const [todo, setTodo] = useState("");
-  console.log(todo);
 
   const handleAddTodo = (e) => {
     e.preventDefault();
